@@ -871,6 +871,8 @@ class SC2ReaderToEsdb():
         matchDB.expansion = 2
       else:
         matchDB.expansion = 0
+      if matchDB.expansion == 2: #LotV updated time scale
+        matchDB.duration_seconds /= 1.4
       matchDB.gateway = normalize_gateway(replay.gateway)
 
       try:
